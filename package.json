@@ -1,0 +1,15 @@
+{
+  "name": "tea-app",
+  "version": "1.0.0",
+  "description": "An App!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chloe",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^34.0.2"
+  }
+}
