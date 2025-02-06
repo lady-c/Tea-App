@@ -1,8 +1,23 @@
 document.querySelectorAll('.tea-button').forEach(button => {
     button.addEventListener('click', function () {
-        const selectedTea = this.getAttribute('data-tea'); // Get tea type
+        const selectedTea = this.getAttribute('teaData'); // Get tea type
         localStorage.setItem('selectedTea', selectedTea); // Store in localStorage
-        window.location.href = 'recommendations.html'; // Navigate to recommendations page
+        window.location.href = 'PreparationAdvice.html'; // Navigate to recommendations page
+    });
+});
+
+document.getElementById('minimize').addEventListener('click', () => {
+    window.electron.minimizeWindow(); // ✅ Uses ipcRenderer safely
+});
+
+document.getElementById('close').addEventListener('click', () => {
+    window.electron.closeWindow(); // ✅ Uses ipcRenderer safely
+});
+
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('start-timer').addEventListener('click', () => {
+        window.location.href = 'Timer.html'; // Navigate to the timer page
     });
 });
 
@@ -40,10 +55,3 @@ if (selectedTea && teaData[selectedTea]) {
 } else {
     document.getElementById('tea-name').textContent = "Tea not found";
 }
-
-// Ensure the script runs after the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('start-timer').addEventListener('click', () => {
-        window.location.href = 'timer.html'; // Navigate to the timer page
-    });
-});

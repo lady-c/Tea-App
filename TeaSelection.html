@@ -8,12 +8,20 @@
     <title>Tea Helper</title>
 </head>
 
+<div id="title-bar">
+    <span>Tea App</span>
+    <div class="title-bar-buttons">
+        <button id="minimize">🗕</button>
+        <button id="close">✖</button>
+    </div>
+</div>
+
 <body>
     <h2>What are we making today?</h2>
-    <a class="tea-button" data-tea="black" href="PreparationAdvice.html">Black Tea</a>
-    <a class="tea-button" data-tea="green" href="PreparationAdvice.html">Green Tea</a>
-    <a class="tea-button" data-tea="white" href="PreparationAdvice.html">White Tea</a>
-    <a class="tea-button" data-tea="infusion" href="PreparationAdvice.html">Infusion</a>
+    <a class="tea-button" teaData="black" href="PreparationAdvice.html">Black Tea</a>
+    <a class="tea-button" teaData="green" href="PreparationAdvice.html">Green Tea</a>
+    <a class="tea-button" teaData="white" href="PreparationAdvice.html">White Tea</a>
+    <a class="tea-button" teaData="infusion" href="PreparationAdvice.html">Infusion</a>
 
     <script src="./renderer.js"></script>
 </body>
