@@ -9,8 +9,8 @@ let win;
 
 const createWindow = () => {
     win = new BrowserWindow({
-        width: 380,
-        height: 460,
+        width: 382,
+        height: 455,
         resizable: false, // Prevents resizing (removes maximize button)
         maximizable: false, // Ensures maximize button is removed
         minimizable: true, // Allows minimizing

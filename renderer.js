@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Start: Go to TeaSelection
+document.getElementById('start').addEventListener('click', () => {
+    window.location.href = 'TeaSelection.html'; // go to tea selection page
+});
+
 // Tea data
 const teaData = {
     green: {

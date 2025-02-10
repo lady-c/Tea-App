@@ -1,8 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kotta+One&display=swap');
+
 $main-color: #576134;
 $secondary-color: #F7FFDC;
 $accent-color-blue: #354242;
 $accent-color-green: #95A752;
+$main-font: 'Kotta One',
+serif;
+
+html,
+body {
+    background-color: $main-color;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: $main-font;
+}
+
+.inner-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centers content horizontally
+    justify-content: center; // Centers content vertically
+    flex-grow: 1;
+    margin: 0px 15px 16px 15px;
+    background-color: $secondary-color;
+}
+
+#title-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+
+    -webkit-app-region: drag;
+    /* Makes the title bar draggable */
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .left {
+        margin-left: 15px;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .right {
+        margin-right: 15px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    p {
+        font-size: 28px;
+        margin: 0px;
+        color: $secondary-color;
+    }
+
+    button {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: $secondary-color;
+        border-width: 3px;
+        background-color: $main-color;
+        color: $secondary-color;
+        font-size: 24px;
+    }
+}
+
+button {
+    -webkit-app-region: no-drag;
+    /* Buttons in title bar won't work without that */
+    font-family: $main-font;
+}
+
+.basic-button {
+    width: 158px;
+    height: 42px;
+    font-size: 24px;
+    background-color: $main-color;
+    color: $secondary-color;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px $accent-color-green;
+}
 
 h1 {
-    color: $main-color;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: $accent-color-blue;
 }

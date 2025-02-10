@@ -4,23 +4,38 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+             style-src 'self' https://fonts.googleapis.com;
+             font-src 'self' https://fonts.gstatic.com;
+             img-src 'self';" />
+
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <title>Tea Helper</title>
 </head>
 
-<div id="title-bar">
-    <span>Tea App</span>
-    <div class="title-bar-buttons">
-        <button id="minimize">🗕</button>
-        <button id="close">✖</button>
-    </div>
-</div>
 
 <body>
-    <h1>Let's brew some tea!</h1>
-    <a class="basic-button" href="TeaSelection.html" class="button-class">Start</a>
+
+    <div id="title-bar">
+        <div class="left" class="app-name">
+            <p>Tea App</p>
+            <img src="media/images/tea-leaf.png">
+        </div>
+        <div class="right" class="title-bar-buttons">
+            <button class="small-button" id="minimize">_</button>
+            <button class="small-button" id="close">X</button>
+        </div>
+    </div>
+
+    <div class="inner-box">
+        <h1>Let's brew some tea!</h1>
+        <button class="basic-button" id="start">Start</button>
+    </div>
+
+    <script src="./preload.js"></script>
     <script src="./renderer.js"></script>
+
+
 </body>
 
 </html>
