@@ -2,26 +2,38 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+             style-src 'self' https://fonts.googleapis.com;
+             font-src 'self' https://fonts.gstatic.com;
+             img-src 'self';" />
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <title>Tea Helper</title>
 </head>
 
-<div id="title-bar">
-    <span>Tea App</span>
-    <div class="title-bar-buttons">
-        <button id="minimize">🗕</button>
-        <button id="close">✖</button>
-    </div>
-</div>
-
 <body>
-    <h2>What are we making today?</h2>
-    <a class="tea-button" teaData="black" href="PreparationAdvice.html">Black Tea</a>
-    <a class="tea-button" teaData="green" href="PreparationAdvice.html">Green Tea</a>
-    <a class="tea-button" teaData="white" href="PreparationAdvice.html">White Tea</a>
-    <a class="tea-button" teaData="infusion" href="PreparationAdvice.html">Infusion</a>
+
+    <div id="title-bar">
+        <div class="left" class="app-name">
+            <p>Tea App</p>
+            <img src="media/images/tea-leaf.png">
+        </div>
+        <div class="right" class="title-bar-buttons">
+            <button class="small-button" id="minimize-window">_</button>
+            <button class="small-button" id="close-window">X</button>
+        </div>
+    </div>
+
+    <div class="inner-box">
+        <div class="selection-grid">
+            <a class="tea-button" teaData="black" href="PreparationAdvice.html"><img src="/media/images/cup black.png">
+                Black Tea</a>
+            <a class="tea-button" teaData="green" href="PreparationAdvice.html">Green Tea</a>
+            <a class="tea-button" teaData="white" href="PreparationAdvice.html">White Tea</a>
+            <a class="tea-button" teaData="infusion" href="PreparationAdvice.html">Infusion</a>
+        </div>
+    </div>
 
     <script src="./renderer.js"></script>
 </body>

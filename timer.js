@@ -63,5 +63,12 @@ document.getElementById('add-minute').addEventListener('click', () => {
     updateTimerDisplay();
 });
 
+// Debug button to skip the timer
+document.getElementById('debug-skip').addEventListener('click', () => {
+    remainingTime = 0;
+    updateTimerDisplay();
+});
+
+
 // Start the timer when the page loads
 startTimer();

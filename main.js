@@ -11,24 +11,24 @@ const createWindow = () => {
     win = new BrowserWindow({
         width: 382,
         height: 455,
-        resizable: false, // Prevents resizing (removes maximize button)
-        maximizable: false, // Ensures maximize button is removed
-        minimizable: true, // Allows minimizing
-        closable: true, // Allows closing
-        frame: false, // Removes native title bar
+        resizable: false,
+        maximizable: false,
+        minimizable: true,
+        closable: true,
+        frame: false,
         icon: path.join(__dirname, 'media/images/plant.png'),
         webPreferences: {
-            nodeIntegration: false, // More secure
-            contextIsolation: true, // Prevents access to `require` in renderer
+            preload: path.join(__dirname, 'preload.js'),
+            nodeIntegration: false,
+            contextIsolation: true,
             enableRemoteModule: false,
-            preload: path.join(__dirname, 'preload.js') // 👈 Add this line
         }
     });
 
     win.loadFile('index.html');
 };
 
-// Handle window actions from renderer
+// Handle window actions
 ipcMain.on('minimize-window', () => {
     if (win) win.minimize();
 });
