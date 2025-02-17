@@ -20,17 +20,34 @@
             <img src="media/images/tea-leaf.png">
         </div>
         <div class="right" class="title-bar-buttons">
-            <button class="small-button" id="minimize-window">_</button>
-            <button class="small-button" id="close-window">X</button>
+            <button class="small-button" id="minimize-window"><img src="media/images/_ button.png"></button>
+            <button class="small-button" id="close-window"><img src="media/images/x button.png"></button>
         </div>
     </div>
 
     <div class="inner-box">
-        <h2>Recommendations</h2>
-        <p id="tea-name">Tea Name</p>
-        <p id="tea-temp">Temperature: </p>
-        <p id="tea-time">Brewing Time: </p>
-        <button class="basic-button" id="start-timer">Start Timer</button>
+
+        <div class="sub-box">
+            <div class="line header">
+                <img id="tea-type" src="" alt="Tea Image">
+                <p id="tea-name">Name</p>
+            </div>
+            <hr class="divider">
+            <div class="line">
+                <img src="media/images/temp.png">
+                <p id="tea-temp">Temp</p>
+            </div>
+            <div class="line">
+                <img src="media/images/time.png">
+                <p id="tea-time">Time</p>
+            </div>
+        </div>
+
+        <div class="buttons-row">
+            <button class="basic-button" id="back">Back</button>
+            <button class="basic-button" id="start-timer">Start Timer</button>
+        </div>
+
     </div>
 
     <script src="./renderer.js"></script>

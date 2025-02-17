@@ -28,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    const backButton = document.getElementById('back');
+    if (backButton) {
+        backButton.addEventListener('click', () => {
+            window.location.href = 'TeaSelection.html'; // Navigate to the tea selection page
+        });
+    }
+
     const startButton = document.getElementById('start');
     if (startButton) {
         startButton.addEventListener('click', () => {
@@ -41,29 +48,34 @@ document.addEventListener("DOMContentLoaded", function () {
         black: {
             name: "Black Tea",
             temp: "90-100°C",
-            time: "3-5 minutes"
+            time: "3-5 minutes",
+            image: "media/images/cup_black.png"
         },
         green: {
             name: "Green Tea",
-            temp: "75-85°C",
-            time: "2-3 minutes"
+            temp: "70-85°C",
+            time: "2-3 minutes",
+            image: "media/images/cup_green.png"
         },
         white: {
             name: "White Tea",
-            temp: "80-90°C",
-            time: "4-7 minutes"
+            temp: "75-85°C",
+            time: "3-5 minutes",
+            image: "media/images/cup_white.png"
         },
         infusion: {
             name: "Infusion",
-            temp: "75-85°C",
-            time: "2-3 minutes"
+            temp: "90-100°C",
+            time: "5-10 minutes",
+            image: "media/images/cup_fruit.png"
         },
     };
 
     if (selectedTea && teaData[selectedTea]) {
         document.getElementById('tea-name').textContent = teaData[selectedTea].name;
-        document.getElementById('tea-temp').textContent = `Temperature: ${teaData[selectedTea].temp}`;
-        document.getElementById('tea-time').textContent = `Brewing Time: ${teaData[selectedTea].time}`;
+        document.getElementById('tea-temp').textContent = teaData[selectedTea].temp;
+        document.getElementById('tea-time').textContent = teaData[selectedTea].time;
+        document.getElementById('tea-type').src = teaData[selectedTea].image;
     } else {
         const teaNameElement = document.getElementById('tea-name');
         if (teaNameElement) {

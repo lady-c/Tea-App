@@ -2,24 +2,37 @@
 const teaData = {
     green: {
         name: "Green Tea",
-        time: 1
+        time: 2,
+        image: "media/images/cup_green.png"
     }, // in minutes
     black: {
         name: "Black Tea",
-        time: 5
+        time: 3,
+        image: "media/images/cup_black.png"
     },
     white: {
         name: "White Tea",
-        time: 7
+        time: 3,
+        image: "media/images/cup_white.png"
     },
     infusion: {
         name: "Infusion",
-        time: 7
+        time: 5,
+        image: "media/images/cup_fruit.png"
     }
 };
 
 // Get selected tea from localStorage
 const selectedTea = localStorage.getItem('selectedTea');
+const teaImageElement = document.getElementById('tea-type');
+
+// Update tea image if element exists
+if (selectedTea && teaData[selectedTea] && teaImageElement) {
+    teaImageElement.src = teaData[selectedTea].image;
+} else {
+    console.warn("Tea image element not found in Timer.html");
+}
+
 
 // Set default brewing time (if tea is not found, default to 3 minutes)
 //let remainingTime = ((teaData[selectedTea] && teaData[selectedTea].time) || 3) * 60;

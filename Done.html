@@ -20,15 +20,23 @@
             <img src="media/images/tea-leaf.png">
         </div>
         <div class="right" class="title-bar-buttons">
-            <button class="small-button" id="minimize-window">_</button>
-            <button class="small-button" id="close-window">X</button>
+            <button class="small-button" id="minimize-window"><img src="media/images/_ button.png"></button>
+            <button class="small-button" id="close-window"><img src="media/images/x button.png"></button>
         </div>
     </div>
 
     <div class="inner-box">
-        <h1>Your tea is done! 🍵</h1>
-        <button class="basic-button" id="snooze">Snooze (+1 min)</button>
-        <button class="basic-button" id="done">Done</button>
+        <div class="sub-box">
+            <p class="text-48px">Enjoy!</p>
+            <hr>
+            <hr>
+            <img id="tea-type" class="tea-big" src="" alt="Tea Image">
+        </div>
+        <div class="buttons-row">
+            <button class="basic-button" id="snooze">Snooze</button>
+            <button class="basic-button" id="done">Done</button>
+        </div>
+    </div>
     </div>
 
     <script src="./renderer.js"></script>

@@ -9,34 +9,115 @@ body {
   font-family: "Kotta One", serif;
 }
 
+a {
+  font-family: "Kotta One", serif;
+}
+
 .inner-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  margin: 0px 15px 16px 15px;
+  margin: 0px 18px 16px 15px;
   background-color: #F7FFDC;
+  border-style: solid;
+  border-color: #354242;
+  border-width: 1px;
+  border-radius: 0px 0px 15px 15px;
+}
+.inner-box .sub-box {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inner-box .sub-box .divider {
+  height: 1px;
+  background-color: #354242;
+  width: 80%;
+}
+.inner-box .sub-box .line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  font-size: 24px;
+  margin: 0px;
+}
+.inner-box .sub-box .line img {
+  height: 68px;
+  align-self: center;
+}
+.inner-box .sub-box .header {
+  font-size: 36px;
+}
+.inner-box .sub-box .tea-medium {
+  height: 122px;
+}
+.inner-box .sub-box .tea-big {
+  height: 149px;
+}
+.inner-box .sub-box p {
+  color: #354242;
+}
+
+.buttons-row {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
 }
 
 .selection-grid {
-  width: 100%;
-  height: 100%;
-  background-color: dodgerblue;
-  display: flex;
-  flex-wrap: wrap;
+  width: 315px;
+  height: 315px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 15px;
-  margin: auto;
+  justify-items: center;
+  align-items: center;
 }
 
 .tea-button {
   width: 150px;
   height: 150px;
-  background-color: white;
+  background-color: #C8D3A5;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #354242;
+  font-size: 16px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #354242;
+  border-width: 1px;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.tea-button :visited,
+.tea-button :hover,
+.tea-button :active {
+  text-decoration: none;
+}
+.tea-button :hover,
+.tea-button :active {
+  box-shadow: inset 0px 0px 20px 6px rgba(53, 66, 66, 0.5);
 }
 .tea-button img {
   width: 80px;
   height: 96px;
+  pointer-events: none;
 }
 
 #title-bar {
@@ -77,10 +158,16 @@ body {
   border-radius: 50%;
   border-style: solid;
   border-color: #F7FFDC;
-  border-width: 3px;
+  border-width: 4px;
   background-color: #576134;
-  color: #F7FFDC;
-  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#title-bar button img {
+  margin: 0;
+  height: 15px;
+  width: 15px;
 }
 
 button {
@@ -101,7 +188,27 @@ button {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   font-weight: normal;
   color: #354242;
+  font-size: 32px;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-weight: normal;
+  color: #354242;
+  font-size: 24px;
+}
+
+.text-48px {
+  font-size: 48px;
+  color: #354242;
+  margin: 0px;
+}
+
+#timer {
+  font-size: 64px;
+  font-weight: bold;
+  color: #576134;
 }/*# sourceMappingURL=style.css.map */
