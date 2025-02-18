@@ -31,5 +31,5 @@
         if (selectedTea && teaData[selectedTea] && teaImageElement) {
             teaImageElement.src = teaData[selectedTea].image;
         } else {
-            console.warn("Tea image element not found in Timer.html");
+            console.warn("Tea image element not found in timer.html");
         }

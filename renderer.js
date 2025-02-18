@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const startTimerButton = document.getElementById('start-timer');
     if (startTimerButton) {
         startTimerButton.addEventListener('click', () => {
-            window.location.href = 'Timer.html'; // Navigate to the timer page
+            window.location.href = 'timer.html'; // Navigate to the timer page
         });
     }
 

@@ -30,7 +30,7 @@ const teaImageElement = document.getElementById('tea-type');
 if (selectedTea && teaData[selectedTea] && teaImageElement) {
     teaImageElement.src = teaData[selectedTea].image;
 } else {
-    console.warn("Tea image element not found in Timer.html");
+    console.warn("Tea image element not found in timer.html");
 }
 
 
@@ -64,7 +64,7 @@ function startTimer() {
             updateTimerDisplay();
         } else {
             clearInterval(timerInterval);
-            window.location.href = 'Done.html'; // Redirect to done page
+            window.location.href = 'done.html'; // Redirect to done page
         }
 
     }, 1000);
@@ -77,10 +77,10 @@ document.getElementById('add-minute').addEventListener('click', () => {
 });
 
 // Debug button to skip the timer
-document.getElementById('debug-skip').addEventListener('click', () => {
-    remainingTime = 0;
-    updateTimerDisplay();
-});
+// document.getElementById('debug-skip').addEventListener('click', () => {
+//     remainingTime = 0;
+//     updateTimerDisplay();
+// });
 
 
 // Start the timer when the page loads

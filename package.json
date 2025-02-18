@@ -5,11 +5,25 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.chloe.teaApp",
+    "productName": "Tea App",
+    "win": {
+      "target": "nsis",
+      "icon": "media/images/AppIcon.ico"
+    }
   },
   "author": "Chloe",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^34.0.2"
+    "electron": "^34.0.2",
+    "electron-builder": "^25.1.8"
+  },
+  "win": {
+    "target": "portable"
   }
+
 }
